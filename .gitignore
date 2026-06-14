@@ -9,3 +9,5 @@ node_modules/
 /Json-report/
 /allure-results/
 /html-report/
+/excel-report/
+/allure-report/
