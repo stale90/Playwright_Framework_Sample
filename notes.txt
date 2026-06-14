@@ -1,9 +1,3 @@
-Changed - 10 June 2026
-1. Fail - remove excel file name from global setup > Need to validate >> it creating multiple Excel file
-2. simplify datamap to array conversion in validation fixture > Need to see if break anything
-3. success - rename method verifyTextFull to verifyText , 
-4. prepare new excel method writeRecordDataToExcel1
-
 
 Framework Related 
 https://github.com/mnovitskyi/sauce-demo-playwright/blob/main/pages/loginPage.ts
@@ -12,6 +6,8 @@ https://github.com/msoriginal/SalesforceProject/blob/main/pageObjects/BasePage.t
 // Shared Folder : \\172.16.8.11\Services\Shailendra Tale
 \\172.16.8.11\Services\Shailendra Tale\Key Reports\RSK Reports- 03 June 2026
 
+----------------------------
+STEPS to Create Framework
 ----------------------------
 1. Install Node.js and VS Code Editor.
 2. Create one random root folder.
@@ -22,12 +18,16 @@ https://github.com/msoriginal/SalesforceProject/blob/main/pageObjects/BasePage.t
         src code folder > config, data, locator, pages, reusable, tests, types
         other folder >  allure-results, excel-report, resources, test-data
         some files > .env file, tsconfig.json, framework-notes.txt
-7. Place Utility files in Reusable folder : Actions,ExcelUtility,Helper,Utility
-8. Place Configuration file in Config Folder: GlobalSetup, Logger, PlayWrightConfig, TestSetup
+7. Place Utility files in Reusable folder : Actions,ExcelUtility,Helper,Utility,Logger
+8. Place Configuration file in Config Folder: GlobalSetup, PlayWrightConfig, TestSetup
 9. Extention Used - Allure Support, Playwright Test for VSCode, vscode-icons
+10.install Allure Report , .env , Excel XLSX packages
+11. install VSCode extentions allure support, Vscode-icon, dotenv, playwright Test for VScode.
 
+------------------------------
+Setup & Generate allure
+------------------------------
 
-> ---------Setup & Generate Allure------------------
 Allure Report --
 Allure is Java based Reporting Tool
 > Install Java on Machine
@@ -44,10 +44,8 @@ npm install -g allure-js-commons
 
 
 Commands -
-Output folder -> 
-allure generate ./allure-results/06-02-2026/06-02-2026-15_54_05 -o allure-report --clean
-Single Html File -> 
-allure generate --single-file ./allure-results/06-09-2026/06-09-2026-13_08_45 --clean
+Output folder -> allure generate ./allure-results/06-02-2026/06-02-2026-15_54_05 -o allure-report --clean
+Single Html File -> allure generate --single-file ./allure-results/06-09-2026/06-09-2026-13_08_45 --clean
 doubleClick or command to open> npx allure open ./allure-report
 
 Single Html File > allure generate --single-file .allure-results/06-12-2026/06-12-2026-10_53_10 --clean
